@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHOTON SITE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<main id="mainBody">
+  <div class="navbar">
+    <div class="left">
+      <div class="mainlogo ">
+        <img src="Assets/logo.jpg" alt="">
+        <h2>EXAM FUSSION</h2>
+      </div>
+    </div>
+    <div class="right">
+      <div class="logo">
+        <button onclick="showLogin()">Login</button>
+      </div>
+      <img src="userimage.webp" alt="">
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="hideLogin()"></div>
+    
+  <div class="container" id="loginContainer" onclick="event.stopPropagation()">
+      <h2 id="formTitle">Login</h2>
+      <form id="loginForm" onsubmit="event.preventDefault(); login();">
+          <label for="logUsername">Username:</label>
+          <input type="text" id="logUsername" name="username" required>
+  
+          <label for="logPassword">Password:</label>
+          <div class="password-container">
+              <input type="password" id="logPassword" name="password" required>
+              <span class="toggle-password" onclick="togglePasswordVisibility('logPassword')">👁️</span>
+          </div>
+  
+          <button type="button" onclick="login()">Login</button>
+          <div class="switch-link" onclick="switchToRegister()">New user? Register</div>
+      </form>
+  
+      <form id="registerForm" onsubmit="event.preventDefault(); register();" style="display: none;">
+          <label for="regUsername">Username:</label>
+          <input type="text" id="regUsername" name="username" required>
+  
+          <label for="regEmail">Email:</label>
+          <input type="email" id="regEmail" name="email" required>
+  
+          <label for="regPassword">Password:</label>
+          <div class="password-container">
+              <input type="password" id="regPassword" name="password" required>
+              <span class="toggle-password" onclick="togglePasswordVisibility('regPassword')">👁️</span>
+          </div>
+  
+          <button type="button" onclick="register()">Register</button>
+          <div class="switch-link" onclick="switchToLogin()">Already a user? Log in</div>
+      </form>
+  
+      <div id="message"></div>
+  </div>
+  <!-----------body----------------> 
+
+  <div class="main">
+    <div class="leftBody">
+      <h1> Order All India Mock Test and crack NEET 2025 with ease!!</h1>
+    </div>
+    <div class="rightBody"> <img src="bodyImg.webp" alt=""></div>
+  </div>
+  <div class="slider-container">
+    <button class="slider-btn left-btn">&#10094;</button>
+    <div class="slider-wrapper">
+      <div class="slider">
+        <div class="card">
+          <div class="upCard">
+            <div class="upcardAlign">
+              <div class="textOpacity">Physics Fundabox 2.0 Combo</div>
+              <div>Buy 2 get 1 free </div>
+            </div>
+          </div>
+          <div class="downCard">
+            <div class="downcardAlign">
+              <div class="price">
+                <div class="cutPrice">₹1500</div>
+                <div class="realPrice">₹1000</div>
+              </div>
+              <button class="BannerBuyBtn">Buy Now</button>
+            </div>
+          </div>
+          <div class="bookBanner">
+            <img src="Assets/bookBanner1.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="upCard">
+            <div class="upcardAlign">
+              <div class="textOpacity">Physics Fundabox 2.0 Combo</div>
+              <div>Buy 2 get 1 free </div>
+            </div>
+          </div>
+          <div class="downCard">
+            <div class="downcardAlign">
+              <div class="price">
+                <div class="cutPrice">₹1500</div>
+                <div class="realPrice">₹1000</div>
+              </div>
+              <button class="BannerBuyBtn">Buy Now</button>
+            </div>
+          </div>
+          <div class="bookBanner">
+            <img src="Assets/bookBanner1.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="upCard">
+            <div class="upcardAlign">
+              <div class="textOpacity">Physics Fundabox 2.0 Combo</div>
+              <div>Buy 2 get 1 free </div>
+            </div>
+          </div>
+          <div class="downCard">
+            <div class="downcardAlign">
+              <div class="price">
+                <div class="cutPrice">₹1500</div>
+                <div class="realPrice">₹1000</div>
+              </div>
+              <button class="BannerBuyBtn">Buy Now</button>
+            </div>
+          </div>
+          <div class="bookBanner">
+            <img src="Assets/bookBanner1.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="upCard">
+            <div class="upcardAlign">
+              <div class="textOpacity">Physics Fundabox 2.0 Combo</div>
+              <div>Buy 2 get 1 free </div>
+            </div>
+          </div>
+          <div class="downCard">
+            <div class="downcardAlign">
+              <div class="price">
+                <div class="cutPrice">₹1500</div>
+                <div class="realPrice">₹1000</div>
+              </div>
+              <button class="BannerBuyBtn">Buy Now</button>
+            </div>
+          </div>
+          <div class="bookBanner">
+            <img src="Assets/bookBanner1.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="upCard">
+            <div class="upcardAlign">
+              <div class="textOpacity">Physics Fundabox 2.0 Combo</div>
+              <div>Buy 2 get 1 free </div>
+            </div>
+          </div>
+          <div class="downCard">
+            <div class="downcardAlign">
+              <div class="price">
+                <div class="cutPrice">₹1500</div>
+                <div class="realPrice">₹1000</div>
+              </div>
+              <button class="BannerBuyBtn">Buy Now</button>
+            </div>
+          </div>
+          <div class="bookBanner">
+            <img src="Assets/bookBanner1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn right-btn">&#10095;</button>
+  </div>
+  <div class="dots-container"></div>
+  <!-- -------------book section ----------- -->
+
+  <nav>
+    <ul>
+      <li><button class="nav-btn" data-section="a">Sec A</button></li>
+      <li><button class="nav-btn" data-section="b">Sec B</button></li>
+      <li><button class="nav-btn" data-section="c">Sec C</button></li>
+    </ul>
+  </nav>
+
+  <div class="sections-container">
+    <!-- Section A -->
+    <div class="book-section" id="sec-a">
+      <h2>Section A</h2>
+      <div class="book-cards">
+        <!-- Book Card 1 -->
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Book Card 2 -->
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <!-- Book Card 3 -->
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="bookAranger">
+            <div>
+              <img src="Assets/bookcover1.jpg" alt="Book Cover" class="book-image">
+            </div>
+            <div class="bookInfo">
+              <h3 class="book-title">Book Title 1</h3>
+              <p class="book-author">Author Name</p>
+              <h4 class="book-page"> 449 pages</h4>
+              <p class="book-price">$20.00</p>
+            </div>
+          </div>
+          <div class="book-actions">
+            <button class="preview-button preview-btn"
+              data-images="/pdfs/page1.png,/pdfs/page1.png,/pdfs/page1.png">Preview
+            </button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section B -->
+    <div class="book-section" id="sec-b">
+      <h2>Section B</h2>
+      <div class="book-cards">
+        <!-- Book Card 1 -->
+        <div class="book-card">
+          <img src="book-cover4.jpg" alt="Book Cover" class="book-image">
+          <h3 class="book-title">Book Title 4</h3>
+          <p class="book-price">$25.00</p>
+          <div class="book-actions">
+            <button class="preview-btn">Preview</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <!-- Book Card 2 -->
+        <div class="book-card">
+          <img src="book-cover5.jpg" alt="Book Cover" class="book-image">
+          <h3 class="book-title">Book Title 5</h3>
+          <p class="book-price">$30.00</p>
+          <div class="book-actions">
+            <button class="preview-btn">Preview</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <!-- Book Card 3 -->
+        <div class="book-card">
+          <img src="book-cover6.jpg" alt="Book Cover" class="book-image">
+          <h3 class="book-title">Book Title 6</h3>
+          <p class="book-price">$28.00</p>
+          <div class="book-actions">
+            <button class="preview-btn">Preview</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section C -->
+    <div class="book-section" id="sec-c">
+      <h2>Section C</h2>
+      <div class="book-cards">
+        <!-- Book Card 1 -->
+        <div class="book-card">
+          <img src="book-cover7.jpg" alt="Book Cover" class="book-image">
+          <h3 class="book-title">Book Title 7</h3>
+          <p class="book-price">$19.00</p>
+          <div class="book-actions">
+            <button class="preview-btn">Preview</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <!-- Book Card 2 -->
+        <div class="book-card">
+          <img src="book-cover8.jpg" alt="Book Cover" class="book-image">
+          <h3 class="book-title">Book Title 8</h3>
+          <p class="book-price">$23.00</p>
+          <div class="book-actions">
+            <button class="preview-btn">Preview</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <!-- Book Card 3 -->
+        <div class="book-card">
+          <img src="book-cover9.jpg" alt="Book Cover" class="book-image">
+          <h3 class="book-title">Book Title 9</h3>
+          <p class="book-price">$20.00</p>
+          <div class="book-actions">
+            <button class="preview-btn">Preview</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footText">
+      <p>About</p>
+      <p>Contact</p>
+      <p>Term of Services</p>
+      <p>Privacy policy</p>
+      <p>Cancelation and Refunds</p>
+    </div>
+    <div class="footImg">
+      <img src="Assets/instaIcon.png" alt="">
+      <img src="Assets/instaIcon.png" alt="">
+      <img src="Assets/instaIcon.png" alt="">
+    </div>
+    <div class="ending">
+      © All Rights Reserved
+    </div>
+  </footer>
+</main>
+<!-- Multiple preview buttons -->
+
+
+<!-- E-Book Slider -->
+<div id="ebookSlider">
+  <div class="zoom-buttons">
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+    <button onclick="fitWidth()">Fit Width</button>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper" id="swiperWrapper"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div class="swiper-button-exit" onclick="closeSlider()">Exit</div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<!-- Add PDF.js from a CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</script>
+</body>
+
+</html>
