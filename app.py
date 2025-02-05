@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Allow CORS for frontend on port 5501 (adjust if frontend port changes)
-cors = CORS(app, resources={r"/*": {"origins": "https://resilient-kulfi-af45c5.netlify.app"}})
+cors = CORS(app, resources={r"/*": {"origins": "https://radiant-trifle-5e9672.netlify.app/"}})
 
 
 DATA_FILE = 'users.json'
