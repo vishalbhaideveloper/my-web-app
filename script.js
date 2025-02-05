@@ -273,13 +273,12 @@ function hideLogin() {
   document.getElementById('loginContainer').classList.remove('active');
   document.getElementById('overlay').classList.remove('active');
 }
-
 function register() {
   const username = document.getElementById('regUsername').value;
   const email = document.getElementById('regEmail').value;
   const password = document.getElementById('regPassword').value;
 
-  fetch('http://127.0.0.1:5000/register', {
+  fetch('https://your-backend-url.com/register', {  // Replace with live backend URL
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, email, password })
@@ -301,7 +300,7 @@ function login() {
   const username = document.getElementById('logUsername').value;
   const password = document.getElementById('logPassword').value;
 
-  fetch('http://127.0.0.1:5000/login', {
+  fetch('https://your-backend-url.com/login', {  // Replace with live backend URL
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -315,6 +314,7 @@ function login() {
     })
     .catch(error => console.error('Error:', error));
 }
+
 
 function switchToLogin() {
   document.getElementById('registerForm').style.display = 'none';
